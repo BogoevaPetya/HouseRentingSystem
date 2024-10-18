@@ -1,13 +1,12 @@
 pipeline{
     agent any
     stages{
-        stage("Build project"){
+        stage('Build project'){
             steps{
                 bat 'dotnet build'
             }
         }
-        
-        stage("Execute Tests"){
+        stage('Execute Tests'){
             steps{
                 bat 'dotnet test'
             }
